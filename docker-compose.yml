@@ -11,3 +11,10 @@ services:
       - "${MONGO_PORT:-27017}:${MONGO_PORT:-27017}"
     volumes:
       - ./data:/data/db
+    networks:
+      - mutagen-evraz-backend
+
+networks:
+  mutagen-backend:
+    external: true
+    name: mutagen-evraz-backend
